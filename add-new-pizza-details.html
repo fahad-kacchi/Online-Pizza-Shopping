@@ -1,0 +1,86 @@
+<!--
+    Code Art Solutions
+    Project Name: online-pizza-shopping
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/w3.css/w3.css">
+        <script src="bootstrap/jquery/jquery-3.3.1.js"> </script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <title>Pizza | Add New Pizza</title>
+
+        <script src="scripts/custom-js/add-new-pizza-validation.js"></script>
+        <style>
+            .jumbotron {
+                position:relative
+                padding-top:50px;
+                padding-bottom:50px;
+            }
+
+            .jumbotron .container {
+                position:relative;
+                z-index:2;
+            }
+
+            .jumbotron-billboard .img{
+                margin-bottom: 0px;
+                opacity: 0.3;
+                color: #fff;
+                background: url(images/background/add-pizza-background.jpg);
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                overflow: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+                z-index:1;
+            }            
+        </style>
+    </head>
+    
+    <body>
+        <br>
+        <div class="jumbotron jumbotron-billboard">
+            <div class="img"></div>
+            <div class="container">
+                <form action="jsp-pages/store-new-pizza-details.jsp" method="post">
+                    <div class="form-group">
+                        <label >Pizza Name:</label>
+                        <input type="text" class="form-control" id="pizza-name" placeholder="Pizza Name" name="pizza-name" required>
+                    </div>
+                    
+                    <label>Small Price: </label>
+                    <input type="number" class="form-control" id="small-price" placeholder="Small Pizza Price" name="small-price" required>
+
+                    <br>
+                    <label> Medium Price: </label>
+                    <input type="number" class="form-control" id="medium-price" placeholder="Medium Pizza Price" name="medium-price" required>
+                    
+                    
+                    <br>
+                    <label> Large Price: </label>
+                    <input type="number" class="form-control" id="large-price" placeholder="Large Pizza Price" name="large-price" required>
+
+                    <br>
+                    <label class="radio-inline">
+                        <input type="radio" name="veg-non-veg-status" value="0" id="veg" required>Veg
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="veg-non-veg-status" value="1" id="non-veg" required>Non-Veg
+                    </label>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-danger">Save</button>
+                    <button type="button" class="btn btn-danger" onclick="clearFields()">Clear</button>
+                    <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

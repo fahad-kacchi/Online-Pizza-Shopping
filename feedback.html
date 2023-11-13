@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="bootstrap/jquery/jquery-3.3.1.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap/w3.css/w3.css">
+        <script src="scripts/custom-js/clear-feedback-inputs.js"></script>
+        
+		<style>
+			body {font-family: Arial, Helvetica, sans-serif;}
+                input[type=text], select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+			}
+			input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+			}
+			input[type=submit]:hover {
+                background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+        <div class="w3-animate-top">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="index.html">Logo</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pizza.html">Pizza</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li class="active"><a href="feedback.html">Feedback</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="admin-login.html"><span class="glyphicon glyphicon-user"></span> Admin-Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        
+        <div class="container" style="background-color:#6495ED">
+            <div class="jumbotron" style="background-color:#6495ED">
+                <center> <h2> <b> Feedback </b> </h2> </center>
+                <br>
+                <div class="well well-lg">
+                    Please take a moment to tell us what you think about our website, our products, our organization, or anything else that comes to mind. We welcome all of your comments and suggestions that will help us serve you better. And...please visit us often!
+                </div>
+
+                <form action="jsp-pages/store-feedback-details.jsp" method="post">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your name.." required>
+                    
+                    <label for="fname">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Your name.." required>
+
+                    <label for="subject">Feedback Message:</label>
+                    <textarea id="feedbackMessage" name="feedbackMessage" placeholder="Write something.." style="height:200px" required></textarea>
+                    <button class="w3-btn w3-black">Submit Feedback</button>
+                    <button type="button" class="w3-btn w3-black" onclick="clearInputs()">Reset</button>
+                </form>
+            </div>
+        </div>
+        <br>
+	</body>
+</html>

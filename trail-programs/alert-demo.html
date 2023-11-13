@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pizza | Online Pizza Order</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        <script src="../bootstrap/jquery/jquery-3.3.1.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../bootstrap/w3.css/w3.css">
+        <style>
+            body{
+              padding: 50px;
+            }
+        </style>
+        <script>
+            window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function(){
+                    $(this).remove(); 
+                });
+            }, 1000);
+        </script>
+    </head>
+    
+    <body>
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Success!</strong> You have been signed in successfully!
+        </div>
+    </body>
+</html>

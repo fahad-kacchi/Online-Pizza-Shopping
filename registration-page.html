@@ -1,0 +1,160 @@
+<!--
+    Code Art Solutions
+    Project Name: Computerized-Dairy
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/w3.css/w3.css">
+        <script src="jquery/jquery-3.3.1.js"> </script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/fonts/glyphicons-halflings-regular.ttf"></script>
+        <title>Online-pizza-shopping | Sign Up</title>
+        <style>
+            .well {
+                font-size: 24px;
+                background-color: white;
+            }
+            .jumbotron{
+                background: url(images/register-background.jpg  );
+                background-size: 100% 100%;
+            }
+            
+            <!-- This is used for date-picker -->
+            [type="date"] {
+              background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+            }
+            [type="date"]::-webkit-inner-spin-button {
+              display: none;
+            }
+            [type="date"]::-webkit-calendar-picker-indicator {
+              opacity: 0;
+            }
+
+            /* custom styles */
+            label {
+              display: block;
+            }
+            input {
+              border: 1px solid #c4c4c4;
+              border-radius: 5px;
+              background-color: #fff;
+              padding: 3px 5px;
+              box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+              width: 190px;
+            }
+            <!-- Date-picker -->
+        </style>        
+        
+        <!--Start: Script -->
+        <script src="scripts/register-validation.js"> </script>
+        <script src="scripts/custom-js/sign-up-validations.js"> </script>
+        <script src="scripts/sign-up-validations.js"> </script>
+        <!--End: Script -->
+    </head>
+    
+    <body>
+        <br>
+        <div class="container">
+            <div class="jumbotron" style="background-color:#ff471a">
+                
+                <div class="row">
+                    <div class="col-md-6">                
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <img class="img-responsive" src="images/background/login-page.jpg" class="img-rounded" id="Panel_Image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">                
+                        <div class="panel-group">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    Sign Up
+                                </div>
+                                <div class="panel-body">
+                                    <form method="post" action="jsp-pages/store-login-details.jsp">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td> <b> Full Name: </b> </td>
+                                                    <td>
+                                                        <div class="col-sm-12">
+                                                            <input name="name" id="name" class="form-control" onchange="fullNameValidation()" required>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr> 
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td> <b> Email: </b> </td>
+                                                    <td>
+                                                        <div class="col-sm-12">
+                                                            <input name="emailid" id="emailid" class="form-control" onchange="emailValidation()" required>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                </tr>
+
+                                                <tr>
+                                                    <td> <b> New Password: </b> </td>
+                                                    <td>
+                                                        <div class="col-sm-12">
+                                                            <input type="password" name="password" id="password" class="form-control" onchange="" maxlength="10" required>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                </tr>
+
+                                                <tr>
+                                                    <td> <b> Confirm Password: </b> </td>
+                                                    <td>
+                                                        <div class="col-sm-12">
+                                                            <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" onchange="passwordValidation()" maxlength="10" required>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                    <td> <hr> </td> 
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <button type="submit" class="w3-round-xxlarge w3-button w3-border w3-hover-red">Sign Up</button>
+                                                        <button type="button" class="w3-round-xxlarge w3-button w3-border w3-hover-red" onclick="clearInputs()">Clear</button>
+                                                    </td>
+                                                    <td>&nbsp;&nbsp;&nbsp;<a href="">Already Login? Sign-In</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
